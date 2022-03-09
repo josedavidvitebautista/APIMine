@@ -1,9 +1,9 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-<center><img src="https://i.pinimg.com/originals/e2/c3/51/e2c351ec8615647084ee85687b8c9132.gif"></center>
+<img align="center" src="https://i.pinimg.com/originals/e2/c3/51/e2c351ec8615647084ee85687b8c9132.gif">
 
-<center><h1><b>API De Algunas Peliculas :'v</b></h1></center>
+<h1 align="center"><b>API De Algunas Peliculas :'v</b></h1>
 
-##Acerca de la API
+## Acerca de la API
 
 Esta API fue creada gracias a Laravel y a un proyecto para una materia la cual devuelve algunos títulos de películas en formato JSON que a su vez esta la consume de otra API (IMDb by Api Dojo).
 
@@ -17,6 +17,7 @@ Laravel es accesible, potente y proporciona las herramientas necesarias para apl
 
 El marco de Laravel es un software de código abierto con [licencia MIT](https://opensource.org/licenses/MIT).
 
-##Contacto
+## Contacto
+
 Jose David Vite Bautista <br>
 [Twitter](https://twitter.com/Zeiya24)
