@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('inicio', [\App\Http\Controllers\APIController::class, 'peliculaspiderman'])->name('S-M');
+//Route::get('inicio', [\App\Http\Controllers\APIController::class, 'peliculaspiderman'])->name('S-M');

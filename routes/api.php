@@ -3,6 +3,12 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\APIController;
+use App\Http\Controllers\PelisMarvelController;
+use App\Http\Controllers\PelisDCController;
+use App\Http\Controllers\PelisSMController;
+use App\Http\Controllers\PelisBatmanController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +25,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/LooL', [APIController::class,'indexpelis']);
-//('/inicioapi', [\App\Http\Controllers\APIController::class, 'peliculasPopularesindex']);
+Route::apiResource("Marvel", PelisMarvelController::class);
+Route::apiResource("DC", PelisDCController::class);
+Route::apiResource("Spider-Man", PelisSMController::class);
+Route::apiResource("Batman", PelisBatmanController::class);
+
+Route::get("/lool1", [PelisMarvelController::class, 'store']);
+Route::get("/lool2", [PelisDCController::class, 'store']);
+Route::get("/lool3", [PelisSMController::class, 'store']);
+Route::get("/lool4", [PelisBatmanController::class, 'store']);
+

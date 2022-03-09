@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\pelisMarvel;
 use Illuminate\Http\Request;
 use App\Models\pelisSM;
 
@@ -11,7 +12,7 @@ class APIController extends Controller{
         $curl = curl_init();
 
         curl_setopt_array($curl, [
-            CURLOPT_URL => "https://imdb8.p.rapidapi.com/auto-complete?q=spiderman",
+            CURLOPT_URL => "https://imdb8.p.rapidapi.com/auto-complete?q=marvel",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_ENCODING => "",
@@ -33,7 +34,6 @@ class APIController extends Controller{
         if ($err) {
             echo "cURL Error #:" . $err;
         } else {
-            //return json_decode($response);
             $datosApi = json_decode($response, true);
             $datos = [];
 
@@ -41,25 +41,27 @@ class APIController extends Controller{
                 $datos[]= [
                     'Titulo'=> $item['l'],
                     'Imagen'=> $item['i']['imageUrl'],
-                    'Año'=> $item['y'],
-
+                    //'Year'=> $item['y'],
                 ];
             }
 
-            $ingresodatos = new pelisSM();
+            return $datos;
+
+            $ingresodatos = new pelisMarvel();
             foreach ($datos as $propi){
                 $ingresodatos->Titulo = $propi['Titulo'];
-                $ingresodatos->Imagen = $propi['Imagen'];
-                $ingresodatos->Año = $propi['Año'];
+                $ingresodatos->Imagen =  $propi['Imagen'];
+                $ingresodatos->Año =  $propi['Year'];
                 $ingresodatos->save();
+                echo "<br> Se Agregaron A La Base De Datos!";
+                //echo $ingresodatos;
             }
-            return $datos;
-            echo "<br> Se Agregaron A La Base De Datos!";
+            //return $datos;
+
         }
     }
 
     public function indexpelis(){
-        $detalles = pelisSM::all();
-        return $detalles;
+        $this->peliculaspiderman();
     }
 }
