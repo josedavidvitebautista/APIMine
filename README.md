@@ -1,5 +1,5 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-<div align="center"><img src="https://i.pinimg.com/originals/e2/c3/51/e2c351ec8615647084ee85687b8c9132.gif"></div>
+<div align="center"><img src="https://i.pinimg.com/originals/a6/2a/eb/a62aebda6557f453c5866d8c5117ef54.gif"></div>
 
 <h1 align="center"><b>API De Algunas Peliculas :'v</b></h1>
 
@@ -18,6 +18,5 @@ Laravel es accesible, potente y proporciona las herramientas necesarias para apl
 El marco de Laravel es un software de código abierto con [licencia MIT](https://opensource.org/licenses/MIT).
 
 ## Contacto
-
 Jose David Vite Bautista <br>
 [Twitter](https://twitter.com/Zeiya24)
