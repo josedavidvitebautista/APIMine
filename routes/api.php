@@ -7,6 +7,7 @@ use App\Http\Controllers\PelisMarvelController;
 use App\Http\Controllers\PelisDCController;
 use App\Http\Controllers\PelisSMController;
 use App\Http\Controllers\PelisBatmanController;
+use App\Http\Controllers\PelisTerminatorController;
 
 
 
@@ -29,9 +30,11 @@ Route::apiResource("Marvel", PelisMarvelController::class);
 Route::apiResource("DC", PelisDCController::class);
 Route::apiResource("Spider-Man", PelisSMController::class);
 Route::apiResource("Batman", PelisBatmanController::class);
+Route::apiResource("Terminator", PelisTerminatorController::class);
 
 Route::get("/lool1", [PelisMarvelController::class, 'store']);
 Route::get("/lool2", [PelisDCController::class, 'store']);
 Route::get("/lool3", [PelisSMController::class, 'store']);
 Route::get("/lool4", [PelisBatmanController::class, 'store']);
+Route::get("/lool5", [PelisTerminatorController::class, 'store']);
 
